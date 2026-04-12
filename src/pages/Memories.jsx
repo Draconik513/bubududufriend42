@@ -1,67 +1,18 @@
-import { motion, AnimatePresence } from "framer-motion";
-import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import { useState } from "react";
 import vidioBunga from "../assets/videos/vidioBungadudu.mp4";
-import fotoKenangan from "../assets/images/couple.jpg";
-
-const HEARTS = Array.from({ length: 30 }, (_, i) => ({
-  id: i,
-  left: Math.random() * 100,
-  size: Math.random() * 24 + 14,
-  delay: Math.random() * 4,
-  duration: Math.random() * 4 + 4,
-  emoji: ["❤️", "💕", "💖", "💗", "💓", "💞", "🩷"][Math.floor(Math.random() * 7)],
-}));
 
 const Memories = ({ isIOS }) => {
-  const [loveShow, setLoveShow] = useState(false);
-  const [hearts, setHearts] = useState([]);
-
-  useEffect(() => {
-    if (!loveShow) { setHearts([]); return; }
-    setHearts(HEARTS);
-  }, [loveShow]);
+  const [flowerBloom, setFlowerBloom] = useState(false);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-pink-50 to-rose-50 p-4 flex flex-col items-center justify-center overflow-hidden relative">
-      {/* Floating Hearts Animation */}
-      <AnimatePresence>
-        {loveShow && hearts.map((h) => (
-          <motion.span
-            key={h.id}
-            initial={{ y: "110vh", opacity: 1, scale: 0.5 }}
-            animate={{ y: "-10vh", opacity: [1, 1, 0], scale: [0.5, 1.2, 0.8] }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: h.duration, delay: h.delay, ease: "easeOut" }}
-            style={{
-              position: "fixed",
-              left: `${h.left}%`,
-              bottom: 0,
-              fontSize: h.size,
-              pointerEvents: "none",
-              zIndex: 50,
-              userSelect: "none",
-            }}
-          >
-            {h.emoji}
-          </motion.span>
-        ))}
-      </AnimatePresence>
-
+    <div className="min-h-screen bg-gradient-to-b from-pink-50 to-rose-50 p-4 flex flex-col items-center justify-center">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
         className="max-w-5xl w-full text-center"
       >
-        <motion.div whileHover={{ scale: isIOS ? 1 : 1.02 }} className="mb-8">
-          <img
-            src={fotoKenangan}
-            alt="Kita Berdua"
-            className="w-full max-w-md mx-auto rounded-xl shadow-2xl border-4 border-white"
-            style={{ transform: "translateZ(0)" }}
-          />
-        </motion.div>
-
         <motion.div
           initial={{ y: 50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -69,64 +20,46 @@ const Memories = ({ isIOS }) => {
           className="bg-white bg-opacity-90 backdrop-blur-sm p-6 rounded-xl shadow-lg mb-8 border border-pink-100"
         >
           <h2 className="text-2xl font-semibold text-rose-600 mb-4">
-            Wish Spesial
+            Permintaan Maafku di Hari Ulang Tahunmu
           </h2>
 
           <div className="text-left text-pink-800 space-y-4 leading-relaxed">
             <p>
-              💌 <strong>Sayangku...</strong>
+              💌 <strong>Maaf ya, Sayang...</strong>
             </p>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.6 }}
             >
-              Setiap hari aku menunggumu pulang dengan semangat.
+              Maafff yaa bubb kalau selama ini aku pernah cuek bahkann nyakitin
+              kamu, atau kurang peka sama perasaan kamuu.
             </motion.p>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 1.2 }}
             >
-              Jangan jadikan penghalang jarak kita saat ini menjadi hambatan
-              untuk kita saling menyayangi, mencintai, dan melindungi satu sama
-              lain.
+              Maaff jugaa bubb kalau kadang aku bikin kamu kecewa, salah paham,
+              atau merasa sendiriii. Aku ndaa pernah berniat nyakitin kamuu
+              bubb🥹. Semua itu karena aku manusia biasa yang masih belajar
+              mencintaimu dengan lebih baik💟
             </motion.p>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 1.8 }}
             >
-              Semoga kita bisa segera pulang kerumah yang sama. Sehat selalu
-              gantengku.
+              Makaacii jugaa bubb sudah sabarr, sudah tetap samaa aku. Aku akan
+              terus belajar jadi lebih baik lagi... untuk kamu 💗💗
             </motion.p>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 1.8 }}
             >
-              Terimakasih untuk segala kasih sayangmu selama ini.
-            </motion.p>
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 1.8 }}
-            >
-              Tetap sama sama belajar menjadi lebih baik bersama ya...
-            </motion.p>
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 1.8 }}
-            >
-              Semangat LDR 🇺🇸🇮🇩
-            </motion.p>
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 1.8 }}
-            >
-              I love U
+              Maaf yaaa bubb, dan makaciiih karena kamu tetap percaya sama
+              akuuu🥹🫶🏻💗💟
             </motion.p>
           </div>
         </motion.div>
@@ -134,21 +67,25 @@ const Memories = ({ isIOS }) => {
         <motion.button
           whileHover={{ scale: isIOS ? 1 : 1.05 }}
           whileTap={{ scale: 0.95 }}
-          onClick={() => setLoveShow(!loveShow)}
+          onClick={() => setFlowerBloom(!flowerBloom)}
           className="relative overflow-hidden bg-rose-600 text-white px-6 py-3 rounded-full shadow-lg mb-8 border border-white/30"
           style={{ WebkitTapHighlightColor: "transparent" }}
         >
           <span className="button-text">
-            {loveShow ? "Tutup Cinta 💔" : "Kirim Cinta ❤️"}
+            {flowerBloom ? "Tutup Bunga" : "Buka Bunga Cinta"}
           </span>
         </motion.button>
 
-        {loveShow && (
+        {flowerBloom && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1 }}
             className="relative flex flex-col md:flex-row items-center justify-center gap-6 mt-8"
+            style={{
+              WebkitTransform: "translate3d(0,0,0)",
+              transformStyle: "preserve-3d",
+            }}
           >
             {/* Romantic Video Bubble */}
             <motion.div
@@ -156,6 +93,7 @@ const Memories = ({ isIOS }) => {
               animate={{ scale: 1 }}
               transition={{ delay: 0.5, type: "spring", stiffness: 100 }}
               className="rounded-xl overflow-hidden shadow-xl border-4 border-rose-200"
+              style={{ backfaceVisibility: "hidden" }}
             >
               <video
                 autoPlay
@@ -170,44 +108,58 @@ const Memories = ({ isIOS }) => {
               </video>
             </motion.div>
 
-            {/* Big Pulsing Heart */}
+            {/* Realistic Blooming Flower */}
             <motion.div
-              initial={{ scale: 0 }}
-              animate={{ scale: [0, 1.2, 1] }}
-              transition={{ duration: 1, ease: "easeOut" }}
-              className="flex flex-col items-center justify-center gap-3"
+              initial={{ y: 200, scale: 0 }}
+              animate={{ y: 0, scale: 1 }}
+              transition={{ duration: 1.5, ease: "easeOut" }}
+              className="relative w-64 h-64 overflow-visible"
+              style={{
+                transformStyle: "preserve-3d",
+                WebkitTransformStyle: "preserve-3d",
+              }}
             >
-              <motion.span
-                animate={{ scale: [1, 1.15, 1] }}
-                transition={{ repeat: Infinity, duration: 1.2, ease: "easeInOut" }}
-                style={{ fontSize: 100, lineHeight: 1 }}
-              >
-                ❤️
-              </motion.span>
-              <div className="flex gap-2 flex-wrap justify-center max-w-xs">
-                {["💕", "💖", "💗", "💓", "💞", "🩷", "💝", "💘"].map((e, i) => (
-                  <motion.span
-                    key={i}
-                    animate={{ y: [0, -10, 0], scale: [1, 1.3, 1] }}
-                    transition={{ repeat: Infinity, duration: 1.5 + i * 0.2, delay: i * 0.15, ease: "easeInOut" }}
-                    style={{ fontSize: 28 }}
-                  >
-                    {e}
-                  </motion.span>
-                ))}
-              </div>
+              <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-4 h-48 bg-green-600 rounded-full"></div>
+              {[...Array(5)].map((_, i) => (
+                <motion.div
+                  key={i}
+                  className="absolute w-32 h-32 bg-gradient-to-br from-pink-500 to-pink-600 rounded-full"
+                  style={{
+                    top: `${Math.cos((i / 5) * 2 * Math.PI) * 40 + 40}px`,
+                    left: `${Math.sin((i / 5) * 2 * Math.PI) * 40 + 40}px`,
+                    transform: "translateZ(0)",
+                    willChange: "transform, opacity",
+                    backfaceVisibility: "hidden",
+                    WebkitBackfaceVisibility: "hidden",
+                  }}
+                  initial={{ scale: 0 }}
+                  animate={{ scale: 1 }}
+                  transition={{ delay: 0.5 + i * 0.2 }}
+                />
+              ))}
+              <motion.div
+                className="absolute w-14 h-14 bg-yellow-300 rounded-full left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 border-4 border-white"
+                initial={{ scale: 0 }}
+                animate={{ scale: 1 }}
+                transition={{ delay: 1.5 }}
+                style={{
+                  transform: "translateZ(0)",
+                  backfaceVisibility: "hidden",
+                }}
+              />
             </motion.div>
           </motion.div>
         )}
 
-        {loveShow && (
+        {flowerBloom && (
           <motion.p
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1.5 }}
+            transition={{ delay: 2.2 }}
             className="text-center text-pink-600 mt-6 italic text-lg"
           >
-            ❤️ Cinta ini untukmu sayang... I Love Uuu 🥺💕
+            🌸 Bunga ini sebagai hadiah dari permintaan maafku, sayang... Tolong
+            diterima ya 🥺❤️
           </motion.p>
         )}
       </motion.div>
