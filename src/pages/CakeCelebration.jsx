@@ -262,7 +262,7 @@ const CakeCelebration = () => {
         className="text-center z-10"
       >
         <h1 className="text-4xl md:text-5xl font-bold text-pink-300 mb-8 neon-text">
-          🎉 Happy Birthday <span className="text-white">My Love</span>! 🎉
+          🎉 Happy Birthday <span className="text-white">My Friend</span>! 🎉
         </h1>
         
         <p className="text-xl text-pink-200 mb-12">
@@ -299,7 +299,7 @@ const CakeCelebration = () => {
           transition={{ duration: 0.5 }}
           className="text-2xl text-cyan-300 font-bold mb-8 animate-glow"
         >
-          Hore! Lilinnya padam! Selamat Ulang Tahun Sayang!
+          Hore! Lilinnya padam! Selamat Ulang Tahun!
         </motion.div>
 
         {!userInteracted && isIOS && (

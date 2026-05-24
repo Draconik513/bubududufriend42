@@ -34,39 +34,18 @@ const Memories = ({ isIOS }) => {
           className="bg-white bg-opacity-90 backdrop-blur-sm p-6 rounded-xl shadow-lg mb-8 border border-pink-100"
         >
          <h2 className="text-2xl font-semibold text-rose-600 mb-4">
-          Permintaan Maafku di Hari Ulang Tahunmu
+          Pesan kecil untuk sahabatku
         </h2>
         
         <div className="text-left text-pink-800 space-y-4 leading-relaxed">
-          <p>
-            💌 <strong>Maaf ya, Sayang...</strong>
-          </p>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.6 }}
           >
-            Maaf kalau selama ini aku pernah cuek 😞, terlalu sibuk 😔, atau kurang
-            peka sama perasaanmu 😢. Maaf kalau kadang aku bikin kamu kecewa, salah
-            paham, atau merasa sendiri 😓. Aku gak pernah berniat nyakitin kamu 🥺.
-            Semua itu karena aku manusia biasa yang masih belajar mencintaimu dengan
-            lebih baik 🤍.
+            Maaf ya kalau selama berteman aku masih sering bikin kesel, ngilang tiba-tiba, atau kadang kurang peka 😭 tapi makasih karena masih tetap jadi teman yang baik sampai sekarang. Semoga kita tetap jadi teman baik sampai kapanpun ✨
           </motion.p>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 1.2 }}
-          >
-            Terima kasih sudah sabar, sudah tetap di sini 🫶. Aku akan terus belajar
-            jadi lebih baik lagi... untuk kamu 💗
-          </motion.p>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 1.8 }}
-          >
-            🙏🏻 Maaf ya, dan makasih karena kamu tetap percaya sama aku.
-          </motion.p>
+          
         </div>
 
         </motion.div>
@@ -79,7 +58,7 @@ const Memories = ({ isIOS }) => {
           style={{ WebkitTapHighlightColor: "transparent" }}
         >
           <span className="button-text">
-            {flowerBloom ? "Tutup Bunga" : "Buka Bunga Cinta"}
+            {flowerBloom ? "Tutup Bunga" : "Buka Bunga"}
           </span>
         </motion.button>
 
@@ -165,8 +144,7 @@ const Memories = ({ isIOS }) => {
             transition={{ delay: 2.2 }}
             className="text-center text-pink-600 mt-6 italic text-lg"
           >
-            🌸 Bunga ini sebagai hadiah dari permintaan maafku, sayang... Tolong
-            diterima ya 🥺❤️
+            Hadiah kecil buat Naura. Makasih udah jadi teman yang selalu ada ✨
           </motion.p>
         )}
       </motion.div>

@@ -19,9 +19,9 @@ const HomePage = ({ isIOS }) => {
           transition={{ delay: 0.5 }}
           className="mb-8"
         >
-          <p className="text-lg text-pink-600 pt-4">Untuk yang tersayang</p>
+          <p className="text-lg text-pink-600 pt-4">Untuk</p>
           <h1 className="text-4xl font-extrabold bg-gradient-to-r from-pink-600 via-pink-400 to-purple-500 text-transparent bg-clip-text drop-shadow-md">
-            Riska Mellyana
+            Naura Datir Razwa
           </h1>
         </motion.div>
 
@@ -58,17 +58,15 @@ const HomePage = ({ isIOS }) => {
           className="space-y-6"
         >
           <h2 className="text-3xl font-bold text-pink-600">
-            Selamat Ulang Tahun Sayang!
+            Selamat Ulang Tahun Bestieku
           </h2>
-          <p className="text-xl text-pink-600">🎉 26 Mei 2026 🎉</p>
+          <p className="text-xl text-pink-600">🎉 27 Juli 2026 🎉</p>
 
           <div className="mt-8 p-4 bg-white/80 backdrop-blur-sm rounded-lg max-w-md mx-auto border border-pink-200">
             <p className="text-pink-800 italic">
-              "Untuk pacarku yang tercinta, di hari spesialmu ini aku ingin
-              mengucapkan... Terima kasih telah menjadi cahaya dalam hidupku.
-              Setiap detik bersamamu adalah anugerah."
+              "Untuk sahabat terbaikku, Naura Datir Razwa 💖"
             </p>
-            <p className="mt-4 text-right text-pink-600 font-medium">- Kurniawan</p>
+            <p className="mt-4 text-right text-pink-600 font-medium"></p>
           </div>
         </motion.div>
 
