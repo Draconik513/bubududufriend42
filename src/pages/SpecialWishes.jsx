@@ -1,14 +1,12 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
-import FotoCount from "../assets/images/foto-birthdayy.jpg";
+import vidioWishes from "../assets/videos/Wishes.mp4";
 
 const SpecialWishes = ({ isIOS }) => {
   const [showHeart, setShowHeart] = useState(false);
 
   const wishes = `
-haii sayangkuu, it's yourday 23 Mei 2026, selamat ulang tahun yaa,
-tepat pada hari ini umur kamu bertambah satu tahun. semoga rezeki kamu dilancarkan dan segala urusan kamu dimudahkan yaa. semoga kamu sehat-sehat terus, ga gampang capek, dan hati kamu selalu tenang.  
-aku berharap semoga kamu bisa menjadi pribadi yang lebih baik ke depannya, tambah dewasa, lebih sabar, dan makin kuat hadapin apapun. makasih udah jadi lelaki yang kuat sampai saat ini. makasih udah bertahan selama ini, padahal kita cuma bisa ketemu lewat layar, chat sama call. aku tau ga gampang ngejalanin hubungan virtual. kdang kngn minta dipelukk gbisaa, tpii kamu tetap di sini, konsisten, dan itu bikin aku ngerasa dihargai dan disayang sma kamuu🫶🏻, sayang aku terus ya, jangan pernah berubah. jaga komitmen kita, meskipun jarak masih misahin kita sekarang. aku percaya klo kita bisa ketemuu klo kmu serius dan effort smaa akuu, aku cuma mau kita tetap sama sama berjuang biar hubungan ini ga cmn virtual ajaa. harapan aku, semoga nanti kita bisa ketemu langsung, bisa ngobrol ga cuma lewat layar, bisa ketawa bareng smbil liat kmu, bisa gandengan tangan beneran. semoga apa yang kita jaga sekarang jadi jalan buat kita ketemu, dan semoga kita bisa kaya gini terus, sampai akhirnya ketemu, maacii udah jadi lelaki yang hebat buat aku. aku mau jadi tujuan dan seseorang yang berarti segalanya buat kamuu, semoga kmu ckup sma akuu yaa. so blessed to have you, love you❤️, bahagia selalu yaa sayangnya akuu, cintanya akuu, aku sayang kamu, hari ini, besok, dan sampai kita ketemu beneran🥰❤️
+Haiiiiii cantikuuuuuuuuu sayaangggkuuuuu,barakallah fii umrik yahh ❤Happy birthday sayaaannggggg🌷🤍🫰🏻 hari ini adalah hari yang paling aku tunggu - tunggu karena aku bisa merayakan kebahagiaan seseorang yang berati segalanya bagiku 💗💝 Kamu adalah alasan tersenyum setiap hari, alasan aku selalu merasa kuat saat dunia terasa berat🌷semoga hari ini memberikanmu banyak kebahagiaan seperti kamu memberikan kebahagiaan dalam hidupku tiap saat 💗🫰🏻semoga kepribadianmu jauh jauh lebih baik daripada yang sebelumnya yaaa menjadi wanita tangguh💪,semoga kamu selalu dalam lindungan Allah,diberi kesehatan,diberi kekuatan, dan kebahagiaan tiada akhir serta impianmu satu persatu menjadi kenyataan😊aku tau hidup kamu tidak selalu mudah, tapi aku ingin tau bahwa kamu tidak sendiri, aku bakal selalu ngedukung kamu,menyemangati kamuu, dan menjadi pundak mu saat kamu lelah 🫶aku bingung harus mendeskripsikan gimana lagi tentang kamu pokoknya jadilah wanita yang berguna bagi semuanya yaaaaa cantik maaf klo kamu harus ketemu cowo yg kaya aku,yang yang jauh dari kata sempurna yang sering bikin kamu marah,bikin kamu nangis,kecewa dengan sikap aku yg kaya gini aku minta maafff yaaa sayanggg🤍🤍 I have no better gift to give you on this special day than my endles love may almight allah grant you good health and sustenance as you add to your age💗🫰🏻 jangan lupa berterima kasih kapada diri sayang sendiri karna sudah kuat di setiap hari hari yang sayang lewatin,i proud of you💗🤍 sekali lagi heppy birthday sayangggggggggggggggggg iloveeeeeee youuuuu moreeeeeeeeeeeeee,semoga jalan kita berdua dipermudahkan Allah ya aminnnn allahhumma 💗🤏❤️🫰🏻💐🌷aku cinta kamuu🤍dan akan selalu mencintai kamuu💕
   `;
 
   return (
@@ -24,13 +22,18 @@ aku berharap semoga kamu bisa menjadi pribadi yang lebih baik ke depannya, tamba
         </h1>
 
         <div className="mb-8">
-  <img
-    src={FotoCount}
-    alt="Birthday"
-    className="w-full max-w-md mx-auto rounded-lg shadow-xl object-cover"
-    style={{ transform: "translateZ(0)" }}
-  />
-</div>
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            webkit-playsinline="true"
+            x-webkit-airplay="allow"
+            className="w-full max-w-md mx-auto rounded-lg shadow-xl"
+          >
+            <source src={vidioWishes} type="video/mp4" />
+          </video>
+        </div>
 
         <motion.div
           whileHover={{ scale: isIOS ? 1 : 1.01 }}
@@ -73,7 +76,7 @@ aku berharap semoga kamu bisa menjadi pribadi yang lebih baik ke depannya, tamba
               >
                 <div className="text-[12rem] select-none text-center">❤️</div>
                 <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-3xl font-bold drop-shadow-lg">
-                  Friven Revano💖
+                  Riska Mellyana💖
                 </div>
                 <div className="text-white text-lg text-center mt-4">
                   Hatiku hanya untukmu, sayang🥹
